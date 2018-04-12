@@ -176,4 +176,6 @@ public class SharedPreferencesHelper {
             Log.e(CoreConstants.TAG, "error in clearPreference, " + e);
         }
     }
+
+    //aggiungo i metodi in preference
 }
