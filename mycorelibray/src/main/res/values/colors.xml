@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#8B0000</color>
+    <color name="colorPrimaryDark">#f06102</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_editTextSelect">#78a5ce</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#00FF00</color>
+
+    <!--Color press-->
+    <color name="colorWhitePress">#ebebe0</color>
+    <color name="colorGreenPress">#84bd8b</color>
+
+    <!--Color event special-->
+    <color name="colorGreenEdge">#147a00</color>
+    <color name="colorGreenNormal">#82d88c</color>
+
+    <!-- Effect background TextView -->
+    <color name="colorGreenNotValidate">#d88288</color>
+    <color name="colorGreenValidateOk">#82d88c</color>
+
+</resources>
