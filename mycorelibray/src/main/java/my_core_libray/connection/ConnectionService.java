@@ -34,11 +34,9 @@ public class ConnectionService {
     public final String TAG = this.getClass().getSimpleName() + " ";
 
     //If server is protected -> isAuthorization = true;
-    boolean isAuthorization = true;
-    String authStr = "sole"+":"+"sole2017";
+    private boolean isAuthorization = false;
+    private String authStr = "";
     private String basicAuth = "Basic " + new String(Base64.encode(authStr.getBytes(),Base64.NO_WRAP));
-
-    //JSONObject jsonArray = null;
 
     //check connection Wifi or Mobile
     private boolean getStateConnection(){
@@ -46,7 +44,6 @@ public class ConnectionService {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnectedOrConnecting();
     }
-
 
     public StatusDataConnection setGetServiceWithParams(String urlStr, HashMap<String,String> postDataParams){
         StatusDataConnection statusDataConnection = new StatusDataConnection();
@@ -181,13 +178,17 @@ public class ConnectionService {
 
 
 
-    public StatusDataConnection setPostService(Context context, String url, HashMap<String, String> postDataParams, JSONObject postDataJsonParams, boolean typeOutPutMediaType){
+    public StatusDataConnection setPostService(Context context, String url, String authStr, boolean isAuthorization, HashMap<String, String> postDataParams, JSONObject postDataJsonParams, boolean typeOutPutMediaType){
         this.context = context;
+        this.authStr = authStr;
+        this.isAuthorization = isAuthorization;
         return setJsonPostService(url, postDataParams, postDataJsonParams, typeOutPutMediaType);
     }
 
-    public StatusDataConnection setGetService(Context context, String url, HashMap<String, String> postDataParams){
+    public StatusDataConnection setGetService(Context context, String url, String authStr, boolean isAuthorization, HashMap<String, String> postDataParams){
         this.context = context;
+        this.authStr = authStr;
+        this.isAuthorization = isAuthorization;
         return setGetServiceWithParams(url, postDataParams);
     }
 
