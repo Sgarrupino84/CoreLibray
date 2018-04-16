@@ -62,8 +62,6 @@ public class CoreConstants {
     public static final Pattern MENTION_PATTERN = Pattern.compile(CoreConstants.PATTERN_MENTION_REGEX);
     public static final Pattern HASHTAG_PATTERN = Pattern.compile(CoreConstants.PATTERN_HASHTAG_REGEX);
 
-    //URL General
-    public static final String IP = "192.168.2.30:3005";
     // ERROR MESSAGES
     public static final String ERR_NO_CONNECTION = "Unable to connect";
 }
